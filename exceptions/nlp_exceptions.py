@@ -1,25 +1,19 @@
-"""NLP Exceptions - Lỗi xử lý ngôn ngữ tự nhiên."""  # Docstring mô tả module
+from typing import Optional, Dict, Any, List
 
-from typing import Optional, Dict, Any, List  # Type hints cho chi tiết lỗi
-
-from . import ChatbotException  # Base cho mọi exception NLP
+from . import ChatbotException
 
 
 class NLPException(ChatbotException):
-    """Base exception cho NLP errors."""  # Docstring mô tả lớp cơ sở
-
     def __init__(
             self,
             message: str,
             error_code: str = "NLP_ERROR",
             details: Optional[Dict[str, Any]] = None
     ):
-        super().__init__(message, error_code, details)  # Ủy quyền cho lớp cha
+        super().__init__(message, error_code, details)
 
 
 class IntentNotFoundError(NLPException):
-    """Lỗi khi không nhận diện được intent."""  # Docstring mô tả lỗi intent
-
     def __init__(
             self,
             message: str = "Không thể xác định ý định của câu hỏi",
@@ -27,7 +21,7 @@ class IntentNotFoundError(NLPException):
             detected_intent: Optional[str] = None,
             original_message: Optional[str] = None
     ):
-        details = {  # Đính kèm score, intent dự đoán và câu gốc
+        details = {
             "confidence": confidence,
             "detected_intent": detected_intent,
             "original_message": original_message
@@ -40,17 +34,6 @@ class IntentNotFoundError(NLPException):
 
 
 class EntityExtractionError(NLPException):
-    """
-    Raised when entity extraction fails or produces invalid results.
-
-    Example:
-        >>> if not entities:
-        ...     raise EntityExtractionError(
-        ...         "No entities extracted from message",
-        ...         message=message
-        ...     )
-    """  # Docstring mô tả lỗi entity
-
     def __init__(
             self,
             message: str = "Không thể trích xuất thông tin từ câu hỏi",
@@ -58,7 +41,7 @@ class EntityExtractionError(NLPException):
             expected_entities: Optional[List[str]] = None,
             found_entities: Optional[List[Dict]] = None
     ):
-        details = {  # Lưu câu gốc, entity kỳ vọng và entity thực tế
+        details = {
             "original_message": original_message,
             "expected_entities": expected_entities,
             "found_entities": found_entities
@@ -71,29 +54,13 @@ class EntityExtractionError(NLPException):
 
 
 class ContextError(NLPException):
-    """
-    Raised when context management fails.
-
-    This includes:
-    - Context retrieval failures
-    - Invalid context data
-    - Context update failures
-
-    Example:
-        >>> if not context or "last_intent" not in context:
-        ...     raise ContextError(
-        ...         "Invalid context structure",
-        ...         session_id=session_id
-        ...     )
-    """  # Docstring mô tả lỗi context
-
     def __init__(
             self,
             message: str = "Lỗi xử lý ngữ cảnh hội thoại",
             session_id: Optional[str] = None,
             context_data: Optional[Dict] = None
     ):
-        details = {  # Lưu session và context hiện có
+        details = {
             "session_id": session_id,
             "context_data": context_data
         }
@@ -105,26 +72,13 @@ class ContextError(NLPException):
 
 
 class PreprocessingError(NLPException):
-    """
-    Raised when text preprocessing fails.
-
-    Example:
-        >>> try:
-        ...     tokens = tokenize(text)
-        ... except Exception as e:
-        ...     raise PreprocessingError(
-        ...         "Failed to tokenize text",
-        ...         original_text=text
-        ...     ) from e
-    """  # Docstring mô tả lỗi tiền xử lý
-
     def __init__(
             self,
             message: str = "Lỗi xử lý văn bản",
             original_text: Optional[str] = None,
             preprocessing_step: Optional[str] = None
     ):
-        details = {  # Lưu văn bản gốc và bước đang thực hiện
+        details = {
             "original_text": original_text,
             "preprocessing_step": preprocessing_step
         }
@@ -135,7 +89,6 @@ class PreprocessingError(NLPException):
         )
 
 
-# Export all NLP exceptions
 __all__ = [
     "NLPException",
     "IntentNotFoundError",

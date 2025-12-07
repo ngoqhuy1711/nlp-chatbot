@@ -1,39 +1,20 @@
-"""
-Custom Exceptions for Chatbot HUCE
-====================
-Exception Hierarchy:
-
-All custom exceptions inherit from ChatbotException base class.
-This module defines the exception hierarchy for the chatbot system.
-
-"""  # Docstring giải thích module exception
-from typing import Optional, Dict, Any  # Type hints dùng cho thuộc tính details
+from typing import Optional, Dict, Any
 
 
 class ChatbotException(Exception):
-    """Base exception for all chatbot-specific errors."""  # Docstring mô tả base class
-
     def __repr__(self) -> str:
-        """Developer-friendly representation."""  # Docstring mô tả __repr__
-        return f"{self.error_code}: {self.message}"  # Hiển thị mã lỗi + thông điệp
+        return f"{self.error_code}: {self.message}"
 
     def __str__(self) -> str:
-        """String representation of the exception."""  # Docstring mô tả __str__
-        if self.details:  # Nếu có details
-            return f"{self.error_code}: {self.message} (Details: {self.details})"  # Hiển thị kèm details
-        return f"{self.error_code}: {self.message}"  # Nếu không có details chỉ in mã + thông điệp
+        if self.details:
+            return f"{self.error_code}: {self.message} (Details: {self.details})"
+        return f"{self.error_code}: {self.message}"
 
     def to_dict(self) -> Dict[str, Any]:
-        """
-        Convert exception to dictionary for API responses.
-
-        Returns:
-            Dictionary with error information
-        """  # Docstring mô tả to_dict
         return {
-            "error_code": self.error_code,  # Trả mã lỗi
-            "error_message": self.message,  # Trả thông điệp lỗi
-            "details": self.details,  # Trả chi tiết lỗi
+            "error_code": self.error_code,
+            "error_message": self.message,
+            "details": self.details,
         }
 
     def __init__(
@@ -42,22 +23,13 @@ class ChatbotException(Exception):
             error_code: str = "CHATBOT_ERROR",
             details: Optional[Dict[str, Any]] = None,
     ):
-        """
-        Initialize ChatbotException.
-
-        Args:
-            message: Error message for humans
-            error_code: Error code for machines (default: CHATBOT_ERROR)
-            details: Additional context (optional)
-        """  # Docstring mô tả constructor
-        super().__init__(message)  # Gọi constructor Exception gốc
-        self.details = details or {}  # Lưu dictionary details (mặc định rỗng)
-        self.error_code = error_code  # Lưu mã lỗi chuẩn hóa
-        self.message = message  # Lưu thông điệp lỗi để dùng lại
+        super().__init__(message)
+        self.details = details or {}
+        self.error_code = error_code
+        self.message = message
 
 
-# Import all exception classes for easy access
-from .nlp_exceptions import (  # noqa: E402  # Import cụ thể để re-export
+from .nlp_exceptions import (  # noqa: E402
     NLPException,
     IntentNotFoundError,
     EntityExtractionError,
@@ -79,23 +51,18 @@ from .api_exceptions import (  # noqa: E402
     ResourceNotFoundError,
 )
 
-# Export all exceptions
-__all__ = [  # Danh sách export khi dùng from exceptions import *
-    # Base
+__all__ = [
     "ChatbotException",
-    # NLP
     "NLPException",
     "IntentNotFoundError",
     "EntityExtractionError",
     "ContextError",
     "PreprocessingError",
-    # Data
     "DataException",
     "DataNotFoundError",
     "CSVLoadError",
     "InvalidMajorError",
     "DataValidationError",
-    # API
     "APIException",
     "ValidationError",
     "RateLimitError",
