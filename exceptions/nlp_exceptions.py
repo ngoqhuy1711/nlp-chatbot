@@ -1,12 +1,12 @@
-"""NLP Exceptions - Lỗi xử lý ngôn ngữ tự nhiên."""
+"""NLP Exceptions - Lỗi xử lý ngôn ngữ tự nhiên."""  # Docstring mô tả module
 
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List  # Type hints cho chi tiết lỗi
 
-from . import ChatbotException
+from . import ChatbotException  # Base cho mọi exception NLP
 
 
 class NLPException(ChatbotException):
-    """Base exception cho NLP errors."""
+    """Base exception cho NLP errors."""  # Docstring mô tả lớp cơ sở
 
     def __init__(
             self,
@@ -14,11 +14,11 @@ class NLPException(ChatbotException):
             error_code: str = "NLP_ERROR",
             details: Optional[Dict[str, Any]] = None
     ):
-        super().__init__(message, error_code, details)
+        super().__init__(message, error_code, details)  # Ủy quyền cho lớp cha
 
 
 class IntentNotFoundError(NLPException):
-    """Lỗi khi không nhận diện được intent."""
+    """Lỗi khi không nhận diện được intent."""  # Docstring mô tả lỗi intent
 
     def __init__(
             self,
@@ -27,7 +27,7 @@ class IntentNotFoundError(NLPException):
             detected_intent: Optional[str] = None,
             original_message: Optional[str] = None
     ):
-        details = {
+        details = {  # Đính kèm score, intent dự đoán và câu gốc
             "confidence": confidence,
             "detected_intent": detected_intent,
             "original_message": original_message
@@ -49,7 +49,7 @@ class EntityExtractionError(NLPException):
         ...         "No entities extracted from message",
         ...         message=message
         ...     )
-    """
+    """  # Docstring mô tả lỗi entity
 
     def __init__(
             self,
@@ -58,7 +58,7 @@ class EntityExtractionError(NLPException):
             expected_entities: Optional[List[str]] = None,
             found_entities: Optional[List[Dict]] = None
     ):
-        details = {
+        details = {  # Lưu câu gốc, entity kỳ vọng và entity thực tế
             "original_message": original_message,
             "expected_entities": expected_entities,
             "found_entities": found_entities
@@ -85,7 +85,7 @@ class ContextError(NLPException):
         ...         "Invalid context structure",
         ...         session_id=session_id
         ...     )
-    """
+    """  # Docstring mô tả lỗi context
 
     def __init__(
             self,
@@ -93,7 +93,7 @@ class ContextError(NLPException):
             session_id: Optional[str] = None,
             context_data: Optional[Dict] = None
     ):
-        details = {
+        details = {  # Lưu session và context hiện có
             "session_id": session_id,
             "context_data": context_data
         }
@@ -116,7 +116,7 @@ class PreprocessingError(NLPException):
         ...         "Failed to tokenize text",
         ...         original_text=text
         ...     ) from e
-    """
+    """  # Docstring mô tả lỗi tiền xử lý
 
     def __init__(
             self,
@@ -124,7 +124,7 @@ class PreprocessingError(NLPException):
             original_text: Optional[str] = None,
             preprocessing_step: Optional[str] = None
     ):
-        details = {
+        details = {  # Lưu văn bản gốc và bước đang thực hiện
             "original_text": original_text,
             "preprocessing_step": preprocessing_step
         }

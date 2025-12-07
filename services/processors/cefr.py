@@ -2,11 +2,11 @@
 CEFR Module - Xử lý quy đổi điểm chứng chỉ tiếng Anh
 """
 
-import os
-from typing import Any, Dict, List, Optional
+import os  # Dùng để ghép đường dẫn tới file CSV
+from typing import Any, Dict, List, Optional  # Kiểu dữ liệu trả về đa dạng
 
-from config import DATA_DIR
-from .cache import read_csv
+from config import DATA_DIR  # Thư mục chứa dữ liệu
+from .cache import read_csv  # Đọc CSV có cache
 
 
 def get_cefr_conversion() -> List[Dict[str, Any]]:
@@ -16,8 +16,8 @@ def get_cefr_conversion() -> List[Dict[str, Any]]:
     Returns:
         List các dòng quy đổi điểm chứng chỉ
     """
-    rows = read_csv(os.path.join(DATA_DIR, "cefr_conversion.csv"))
-    return rows
+    rows = read_csv(os.path.join(DATA_DIR, "cefr_conversion.csv"))  # Đọc toàn bộ bảng quy đổi
+    return rows  # Trả nguyên dữ liệu để caller sử dụng
 
 
 def convert_certificate_score(cert_type: str, score: float) -> Optional[float]:
@@ -31,32 +31,32 @@ def convert_certificate_score(cert_type: str, score: float) -> Optional[float]:
     Returns:
         Điểm quy đổi HUCE, hoặc None nếu không tìm thấy
     """
-    rows = get_cefr_conversion()
+    rows = get_cefr_conversion()  # Lấy bảng quy đổi
 
-    for row in rows:
+    for row in rows:  # Duyệt từng dòng quy đổi
         try:
             if cert_type.upper() == "IELTS":
-                ielts_range = row.get("IELTS", "").strip()
-                if "-" in ielts_range:
+                ielts_range = row.get("IELTS", "").strip()  # Mỗi dòng chứa ngưỡng IELTS
+                if "-" in ielts_range:  # Dạng khoảng điểm
                     min_score, max_score = map(float, ielts_range.split("-"))
-                    if min_score <= score <= max_score:
-                        return float(row.get("Điểm quy đổi", 0))
+                    if min_score <= score <= max_score:  # Nếu điểm nằm trong khoảng
+                        return float(row.get("Điểm quy đổi", 0))  # Trả điểm HUCE
                 else:
-                    if float(ielts_range) == score:
+                    if float(ielts_range) == score:  # Dạng giá trị đơn lẻ
                         return float(row.get("Điểm quy đổi", 0))
 
             elif cert_type.upper() == "TOEFL IBT" or cert_type.upper() == "TOEFL":
-                toefl_range = row.get("TOEFL iBT", "").strip()
-                if "trở lên" in toefl_range:
+                toefl_range = row.get("TOEFL iBT", "").strip()  # Chuỗi mô tả ngưỡng TOEFL
+                if "trở lên" in toefl_range:  # Dạng "X trở lên"
                     min_score = float(toefl_range.replace("trở lên", "").strip())
                     if score >= min_score:
                         return float(row.get("Điểm quy đổi", 0))
-                elif "-" in toefl_range:
+                elif "-" in toefl_range:  # Dạng khoảng
                     min_score, max_score = map(float, toefl_range.split("-"))
                     if min_score <= score <= max_score:
                         return float(row.get("Điểm quy đổi", 0))
 
-        except (ValueError, AttributeError):
+        except (ValueError, AttributeError):  # Đề phòng giá trị không hợp lệ
             continue
 
-    return None
+    return None  # Không tìm thấy quy đổi phù hợp

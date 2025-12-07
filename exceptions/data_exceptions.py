@@ -1,12 +1,12 @@
-"""Data Exceptions - Lỗi xử lý dữ liệu."""
+"""Data Exceptions - Lỗi xử lý dữ liệu."""  # Docstring mô tả module lỗi dữ liệu
 
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any  # Type hints cho chi tiết lỗi
 
-from . import ChatbotException
+from . import ChatbotException  # Base exception chung
 
 
 class DataException(ChatbotException):
-    """Base exception cho data errors."""
+    """Base exception cho data errors."""  # Docstring mô tả lớp cơ sở
 
     def __init__(
             self,
@@ -14,11 +14,11 @@ class DataException(ChatbotException):
             error_code: str = "DATA_ERROR",
             details: Optional[Dict[str, Any]] = None
     ):
-        super().__init__(message, error_code, details)
+        super().__init__(message, error_code, details)  # Ủy quyền cho ChatbotException
 
 
 class DataNotFoundError(DataException):
-    """Lỗi khi không tìm thấy dữ liệu."""
+    """Lỗi khi không tìm thấy dữ liệu."""  # Docstring mô tả trường hợp không có dữ liệu
 
     def __init__(
             self,
@@ -26,14 +26,14 @@ class DataNotFoundError(DataException):
             data_type: Optional[str] = None,
             query_params: Optional[Dict[str, Any]] = None
     ):
-        details = {
+        details = {  # Ghi nhận loại dữ liệu và tham số truy vấn
             "data_type": data_type,
             "query_params": query_params
         }
         super().__init__(
             message,
             error_code="DATA_NOT_FOUND",
-            details={k: v for k, v in details.items() if v is not None}
+            details={k: v for k, v in details.items() if v is not None}  # Bỏ trường None
         )
 
 
@@ -49,7 +49,7 @@ class CSVLoadError(DataException):
         ...         f"Failed to load CSV: {csv_path}",
         ...         file_path=csv_path
         ...     ) from e
-    """
+    """  # Docstring mô tả tình huống lỗi đọc CSV
 
     def __init__(
             self,
@@ -57,7 +57,7 @@ class CSVLoadError(DataException):
             file_path: Optional[str] = None,
             error_details: Optional[str] = None
     ):
-        details = {
+        details = {  # Lưu đường dẫn file và lỗi nguồn
             "file_path": file_path,
             "error_details": error_details
         }
@@ -79,7 +79,7 @@ class InvalidMajorError(DataException):
         ...         "Ngành không hợp lệ",
         ...         major_name=major_name
         ...     )
-    """
+    """  # Docstring mô tả lỗi khi ngành không tồn tại
 
     def __init__(
             self,
@@ -88,7 +88,7 @@ class InvalidMajorError(DataException):
             major_code: Optional[str] = None,
             suggestions: Optional[list] = None
     ):
-        details = {
+        details = {  # Ghi nhận tên/mã ngành và gợi ý thay thế
             "major_name": major_name,
             "major_code": major_code,
             "suggestions": suggestions
@@ -111,7 +111,7 @@ class DataValidationError(DataException):
         ...         field="score",
         ...         value=score
         ...     )
-    """
+    """  # Docstring mô tả lỗi dữ liệu không hợp lệ
 
     def __init__(
             self,
@@ -120,7 +120,7 @@ class DataValidationError(DataException):
             value: Optional[Any] = None,
             expected_type: Optional[str] = None
     ):
-        details = {
+        details = {  # Lưu thông tin trường sai, giá trị và type mong đợi
             "field": field,
             "value": value,
             "expected_type": expected_type

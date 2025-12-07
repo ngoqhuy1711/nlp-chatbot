@@ -1,295 +1,166 @@
 [
   {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Thi tốt nghiệp THPT"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "CCQT"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
+    "label": "CHI_TIEU",
     "pattern": [
       {
-        "LOWER": "ccqt"
+        "LOWER": "chi"
+      },
+      {
+        "LOWER": "tieu"
       }
     ]
   },
   {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "THPT_NK"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
+    "label": "CHI_TIEU",
     "pattern": [
-      {
-        "LOWER": "thpt_nk"
-      }
-    ]
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "K00"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "SP1"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "SP2"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "SP3"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "SP4"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "VS1"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "VS2"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "VS3"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "VS4"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Kỳ thi năng lực/Đánh giá (TSA, ĐGNL, V-SAT)"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "THPT"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Xét học bạ THPT"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Học bạ"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Xét học bạ"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "TSA/SPT/V-SAT"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "V-SAT"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "TSA"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "SPT"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Tuyển thẳng"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Ưu tiên xét tuyển"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Tuyển thẳng/Ưu tiên"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Chứng chỉ quốc tế"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Đánh giá năng lực"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "ĐGNL"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Kỳ thi năng lực"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": "Thi đánh giá năng lực"
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "thi"
-      },
-      {
-        "LOWER": "tốt"
-      },
-      {
-        "LOWER": "nghiệp"
-      },
-      {
-        "LOWER": "thpt"
-      }
-    ]
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "thi"
-      },
-      {
-        "LOWER": "tot"
-      },
-      {
-        "LOWER": "nghiep"
-      },
-      {
-        "LOWER": "thpt"
-      }
-    ]
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "xét"
-      },
-      {
-        "LOWER": "học"
-      },
-      {
-        "LOWER": "bạ"
-      }
-    ]
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "xet"
-      },
-      {
-        "LOWER": "hoc"
-      },
-      {
-        "LOWER": "ba"
-      }
-    ]
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "học"
-      },
-      {
-        "LOWER": "bạ"
-      }
-    ]
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "hoc"
-      },
-      {
-        "LOWER": "ba"
-      }
-    ]
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "tuyển"
-      },
-      {
-        "LOWER": "thẳng"
-      }
-    ]
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "tuyen"
-      },
-      {
-        "LOWER": "thang"
-      }
-    ]
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "ưu"
-      },
-      {
-        "LOWER": "tiên"
-      },
-      {
-        "LOWER": "xét"
-      },
-      {
-        "LOWER": "tuyển"
-      }
-    ]
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "uu"
-      },
-      {
-        "LOWER": "tien"
-      },
-      {
-        "LOWER": "xet"
-      },
-      {
-        "LOWER": "tuyen"
-      }
-    ]
-  },
-  {
-    "label": "PHUONG_THUC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "chứng"
-      },
       {
         "LOWER": "chỉ"
       },
       {
-        "LOWER": "quốc"
-      },
-      {
-        "LOWER": "tế"
+        "LOWER": "tiêu"
       }
     ]
   },
   {
-    "label": "PHUONG_THUC_TUYEN_SINH",
+    "label": "CHI_TIEU",
+    "pattern": [
+      {
+        "LOWER": "quota"
+      }
+    ]
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": [
+      {
+        "LOWER": "so"
+      },
+      {
+        "LOWER": "cho"
+      }
+    ]
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": [
+      {
+        "LOWER": "so"
+      },
+      {
+        "LOWER": "luong"
+      },
+      {
+        "LOWER": "tuyen"
+      }
+    ]
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": [
+      {
+        "LOWER": "số"
+      },
+      {
+        "LOWER": "chỗ"
+      }
+    ]
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": [
+      {
+        "LOWER": "số"
+      },
+      {
+        "LOWER": "lượng"
+      },
+      {
+        "LOWER": "tuyển"
+      }
+    ]
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": "chi tieu"
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": "chỉ tiêu"
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": "quota"
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": "so cho"
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": "so luong tuyen"
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": "so sinh vien"
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": "số chỗ"
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": "số lượng tuyển"
+  },
+  {
+    "label": "CHI_TIEU",
+    "pattern": "số sinh viên"
+  },
+  {
+    "label": "CHUNG_CHI",
+    "pattern": "ACT"
+  },
+  {
+    "label": "CHUNG_CHI",
+    "pattern": "Chứng chỉ ngoại ngữ"
+  },
+  {
+    "label": "CHUNG_CHI",
+    "pattern": "Chứng chỉ quốc tế"
+  },
+  {
+    "label": "CHUNG_CHI",
+    "pattern": "Chứng chỉ tiếng Anh"
+  },
+  {
+    "label": "CHUNG_CHI",
+    "pattern": "IELTS"
+  },
+  {
+    "label": "CHUNG_CHI",
+    "pattern": "IELTS Academic"
+  },
+  {
+    "label": "CHUNG_CHI",
+    "pattern": "SAT"
+  },
+  {
+    "label": "CHUNG_CHI",
+    "pattern": "TOEFL"
+  },
+  {
+    "label": "CHUNG_CHI",
+    "pattern": "TOEIC"
+  },
+  {
+    "label": "CHUNG_CHI",
+    "pattern": [
+      {
+        "LOWER": "act"
+      }
+    ]
+  },
+  {
+    "label": "CHUNG_CHI",
     "pattern": [
       {
         "LOWER": "chung"
@@ -306,62 +177,303 @@
     ]
   },
   {
-    "label": "PHUONG_THUC_TUYEN_SINH",
+    "label": "CHUNG_CHI",
     "pattern": [
       {
-        "LOWER": "đánh"
+        "LOWER": "chung"
       },
       {
-        "LOWER": "giá"
+        "LOWER": "chi"
       },
       {
-        "LOWER": "năng"
+        "LOWER": "tieng"
       },
       {
-        "LOWER": "lực"
+        "LOWER": "anh"
       }
     ]
   },
   {
-    "label": "PHUONG_THUC_TUYEN_SINH",
+    "label": "CHUNG_CHI",
     "pattern": [
       {
-        "LOWER": "danh"
+        "LOWER": "chứng"
       },
       {
-        "LOWER": "gia"
+        "LOWER": "chỉ"
       },
       {
-        "LOWER": "nang"
+        "LOWER": "quốc"
       },
       {
-        "LOWER": "luc"
+        "LOWER": "tế"
       }
     ]
   },
   {
-    "label": "DIEU_KIEN_TUYEN_SINH",
-    "pattern": "Học sinh chuyên/trọng điểm, học lực >=8.0"
+    "label": "CHUNG_CHI",
+    "pattern": [
+      {
+        "LOWER": "chứng"
+      },
+      {
+        "LOWER": "chỉ"
+      },
+      {
+        "LOWER": "tiếng"
+      },
+      {
+        "LOWER": "anh"
+      }
+    ]
   },
   {
-    "label": "DIEU_KIEN_TUYEN_SINH",
-    "pattern": "SAT >= 1200 hoặc ACT >= 26"
+    "label": "CHUNG_CHI",
+    "pattern": [
+      {
+        "LOWER": "ielts"
+      }
+    ]
   },
   {
-    "label": "DIEU_KIEN_TUYEN_SINH",
-    "pattern": "Hoàn thành chương trình dự bị đại học"
+    "label": "CHUNG_CHI",
+    "pattern": [
+      {
+        "LOWER": "sat"
+      }
+    ]
   },
   {
-    "label": "DIEU_KIEN_TUYEN_SINH",
-    "pattern": "Đoạt giải HSG cấp tỉnh/thành phố"
+    "label": "CHUNG_CHI",
+    "pattern": [
+      {
+        "LOWER": "toefl"
+      }
+    ]
   },
   {
-    "label": "DIEU_KIEN_TUYEN_SINH",
-    "pattern": "Học lực giỏi"
+    "label": "CHUNG_CHI",
+    "pattern": [
+      {
+        "LOWER": "toeic"
+      }
+    ]
   },
   {
-    "label": "DIEU_KIEN_TUYEN_SINH",
-    "pattern": "Điểm trung bình >= 8.0"
+    "label": "CHUYEN_NGANH",
+    "pattern": "Hệ thống kỹ thuật trong công trình"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Kinh tế và quản lý bất động sản"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Kinh tế và quản lý đô thị"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Kiểm toán đầu tư xây dựng"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Kỹ thuật Công trình thuỷ"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Kỹ thuật công trình biển"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Kỹ thuật cơ điện"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Kỹ thuật nước - Môi trường nước"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Kỹ thuật ô tô"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Logistics công nghiệp"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Logistics đô thị"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Máy xây dựng"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Quản lý hạ tầng, đất đai đô thị"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Tin học xây dựng"
+  },
+  {
+    "label": "CHUYEN_NGANH",
+    "pattern": "Xây dựng Dân dụng và Công nghiệp"
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": [
+      {
+        "LOWER": "diem"
+      },
+      {
+        "LOWER": "chuan"
+      }
+    ]
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": [
+      {
+        "LOWER": "diem"
+      },
+      {
+        "LOWER": "san"
+      }
+    ]
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": [
+      {
+        "LOWER": "diem"
+      },
+      {
+        "LOWER": "xet"
+      },
+      {
+        "LOWER": "tuyen"
+      }
+    ]
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": [
+      {
+        "LOWER": "nguong"
+      },
+      {
+        "LOWER": "diem"
+      }
+    ]
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": [
+      {
+        "LOWER": "ngưỡng"
+      },
+      {
+        "LOWER": "điểm"
+      }
+    ]
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": [
+      {
+        "LOWER": "trung"
+      },
+      {
+        "LOWER": "tuyen"
+      }
+    ]
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": [
+      {
+        "LOWER": "trúng"
+      },
+      {
+        "LOWER": "tuyển"
+      }
+    ]
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": [
+      {
+        "LOWER": "điểm"
+      },
+      {
+        "LOWER": "chuẩn"
+      }
+    ]
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": [
+      {
+        "LOWER": "điểm"
+      },
+      {
+        "LOWER": "sàn"
+      }
+    ]
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": [
+      {
+        "LOWER": "điểm"
+      },
+      {
+        "LOWER": "xét"
+      },
+      {
+        "LOWER": "tuyển"
+      }
+    ]
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": "diem chuan"
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": "diem san"
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": "diem xet tuyen"
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": "nguong diem"
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": "ngưỡng điểm"
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": "trung tuyen"
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": "trúng tuyển"
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": "điểm chuẩn"
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": "điểm sàn"
+  },
+  {
+    "label": "DIEM_CHUAN",
+    "pattern": "điểm xét tuyển"
   },
   {
     "label": "DIEU_KIEN_TUYEN_SINH",
@@ -373,29 +485,48 @@
   },
   {
     "label": "DIEU_KIEN_TUYEN_SINH",
-    "pattern": "Điểm SAT >= 1200"
+    "pattern": "Hoàn thành chương trình dự bị đại học"
   },
   {
     "label": "DIEU_KIEN_TUYEN_SINH",
-    "pattern": "Điểm ACT >= 26"
+    "pattern": "Học lực giỏi"
+  },
+  {
+    "label": "DIEU_KIEN_TUYEN_SINH",
+    "pattern": "Học sinh chuyên/trọng điểm, học lực >=8.0"
+  },
+  {
+    "label": "DIEU_KIEN_TUYEN_SINH",
+    "pattern": "SAT >= 1200 hoặc ACT >= 26"
   },
   {
     "label": "DIEU_KIEN_TUYEN_SINH",
     "pattern": [
       {
-        "LOWER": "học"
+        "LOWER": "doat"
       },
       {
-        "LOWER": "sinh"
+        "LOWER": "giai"
       },
       {
-        "LOWER": "chuyên"
+        "LOWER": "hsg"
+      }
+    ]
+  },
+  {
+    "label": "DIEU_KIEN_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "hoc"
       },
       {
-        "LOWER": "trọng"
+        "LOWER": "luc"
       },
       {
-        "LOWER": "điểm"
+        "LOWER": ">="
+      },
+      {
+        "LIKE_NUM": true
       }
     ]
   },
@@ -440,16 +571,19 @@
     "label": "DIEU_KIEN_TUYEN_SINH",
     "pattern": [
       {
-        "LOWER": "hoc"
+        "LOWER": "học"
       },
       {
-        "LOWER": "luc"
+        "LOWER": "sinh"
       },
       {
-        "LOWER": ">="
+        "LOWER": "chuyên"
       },
       {
-        "LIKE_NUM": true
+        "LOWER": "trọng"
+      },
+      {
+        "LOWER": "điểm"
       }
     ]
   },
@@ -469,357 +603,181 @@
   },
   {
     "label": "DIEU_KIEN_TUYEN_SINH",
+    "pattern": "Điểm ACT >= 26"
+  },
+  {
+    "label": "DIEU_KIEN_TUYEN_SINH",
+    "pattern": "Điểm SAT >= 1200"
+  },
+  {
+    "label": "DIEU_KIEN_TUYEN_SINH",
+    "pattern": "Điểm trung bình >= 8.0"
+  },
+  {
+    "label": "DIEU_KIEN_TUYEN_SINH",
+    "pattern": "Đoạt giải HSG cấp tỉnh/thành phố"
+  },
+  {
+    "label": "HOC_BONG",
+    "pattern": "Học bổng CSC"
+  },
+  {
+    "label": "HOC_BONG",
+    "pattern": "Học bổng Kumho Asiana"
+  },
+  {
+    "label": "HOC_BONG",
+    "pattern": "Học bổng Merali"
+  },
+  {
+    "label": "HOC_BONG",
+    "pattern": "Học bổng khuyến khích học tập"
+  },
+  {
+    "label": "HOC_BONG",
+    "pattern": "Học bổng Đỗ Quốc Sam"
+  },
+  {
+    "label": "HOC_PHI",
     "pattern": [
       {
-        "LOWER": "doat"
+        "LOWER": "chi"
       },
       {
-        "LOWER": "giai"
-      },
-      {
-        "LOWER": "hsg"
-      }
-    ]
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kiến trúc"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kiến trúc công nghệ"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kỹ thuật Cấp thoát nước"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kỹ thuật Môi trường"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kỹ thuật vật liệu"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Công nghệ kỹ thuật Vật liệu xây dựng"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kỹ thuật cơ khí"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kỹ thuật điện"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kỹ thuật điều khiển và tự động hoá"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kiến trúc công nghệ"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kiến trúc cảnh quan"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kiến trúc nội thất"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Quy hoạch vùng và đô thị"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Mỹ thuật Đô thị"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Thiết kế công nghiệp"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Thiết kế đồ hoạ"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Thiết kế thời trang"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kỹ thuật xây dựng"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Xây dựng Dân dụng và Công nghiệp"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "XDDD&CN"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Hệ thống kỹ thuật trong công trình"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Tin học xây dựng"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Công nghệ thông tin"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Công nghệ Đa phương tiện"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "An toàn thông tin"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Khoa học Máy tính"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Khoa học dữ liệu"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kỹ thuật cơ khí"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Kinh tế xây dựng"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Quản lý dự án"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": "Logistics và Quản lý chuỗi cung ứng"
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": [
-      {
-        "LOWER": "kiến"
-      },
-      {
-        "LOWER": "trúc"
-      }
-    ]
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": [
-      {
-        "LOWER": "kien"
-      },
-      {
-        "LOWER": "truc"
-      }
-    ]
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": [
-      {
-        "LOWER": "công"
-      },
-      {
-        "LOWER": "nghệ"
-      },
-      {
-        "LOWER": "thông"
-      },
-      {
-        "LOWER": "tin"
-      }
-    ]
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": [
-      {
-        "LOWER": "cong"
-      },
-      {
-        "LOWER": "nghe"
-      },
-      {
-        "LOWER": "thong"
-      },
-      {
-        "LOWER": "tin"
-      }
-    ]
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": [
-      {
-        "LOWER": "kỹ"
-      },
-      {
-        "LOWER": "thuật"
-      },
-      {
-        "LOWER": "xây"
-      },
-      {
-        "LOWER": "dựng"
-      }
-    ]
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": [
-      {
-        "LOWER": "ky"
-      },
-      {
-        "LOWER": "thuat"
-      },
-      {
-        "LOWER": "xay"
-      },
-      {
-        "LOWER": "dung"
-      }
-    ]
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": [
-      {
-        "LOWER": "khoa"
-      },
-      {
-        "LOWER": "học"
-      },
-      {
-        "LOWER": "máy"
-      },
-      {
-        "LOWER": "tính"
-      }
-    ]
-  },
-  {
-    "label": "TEN_NGANH",
-    "pattern": [
-      {
-        "LOWER": "khoa"
+        "LOWER": "phi"
       },
       {
         "LOWER": "hoc"
       },
       {
-        "LOWER": "may"
-      },
-      {
-        "LOWER": "tinh"
+        "LOWER": "tap"
       }
     ]
   },
   {
-    "label": "TEN_NGANH",
+    "label": "HOC_PHI",
     "pattern": [
       {
-        "LOWER": "thuật"
+        "LOWER": "chi"
       },
       {
-        "LOWER": "kế"
+        "LOWER": "phí"
       },
       {
-        "LOWER": "công"
+        "LOWER": "học"
       },
       {
-        "LOWER": "nghiệp"
+        "LOWER": "tập"
       }
     ]
   },
   {
-    "label": "TEN_NGANH",
+    "label": "HOC_PHI",
     "pattern": [
       {
-        "LOWER": "thuat"
+        "LOWER": "hoc"
       },
       {
-        "LOWER": "ke"
-      },
-      {
-        "LOWER": "cong"
-      },
-      {
-        "LOWER": "nghiep"
+        "LOWER": "phi"
       }
     ]
   },
   {
-    "label": "TEN_NGANH",
+    "label": "HOC_PHI",
     "pattern": [
       {
-        "LOWER": "quản"
+        "LOWER": "học"
       },
       {
-        "LOWER": "lý"
-      },
-      {
-        "LOWER": "dự"
-      },
-      {
-        "LOWER": "án"
+        "LOWER": "phí"
       }
     ]
   },
   {
-    "label": "TEN_NGANH",
+    "label": "HOC_PHI",
     "pattern": [
       {
-        "LOWER": "quan"
+        "LOWER": "tien"
       },
       {
-        "LOWER": "ly"
-      },
-      {
-        "LOWER": "du"
-      },
-      {
-        "LOWER": "an"
+        "LOWER": "hoc"
       }
     ]
   },
   {
-    "label": "MA_NGANH",
-    "pattern": "7580101"
+    "label": "HOC_PHI",
+    "pattern": [
+      {
+        "LOWER": "tiền"
+      },
+      {
+        "LOWER": "học"
+      }
+    ]
   },
   {
-    "label": "MA_NGANH",
-    "pattern": "7580104"
+    "label": "HOC_PHI",
+    "pattern": "chi phi hoc tap"
   },
   {
-    "label": "MA_NGANH",
-    "pattern": "72104_NT"
+    "label": "HOC_PHI",
+    "pattern": "chi phí học tập"
   },
   {
-    "label": "MA_NGANH",
-    "pattern": "7580102"
+    "label": "HOC_PHI",
+    "pattern": "hoc phi"
   },
   {
-    "label": "MA_NGANH",
-    "pattern": "7580103"
+    "label": "HOC_PHI",
+    "pattern": "học phí"
   },
   {
-    "label": "MA_NGANH",
-    "pattern": "7580105"
+    "label": "HOC_PHI",
+    "pattern": "phi dao tao"
+  },
+  {
+    "label": "HOC_PHI",
+    "pattern": "phí đào tạo"
+  },
+  {
+    "label": "HOC_PHI",
+    "pattern": "tien hoc"
+  },
+  {
+    "label": "HOC_PHI",
+    "pattern": "tiền học"
+  },
+  {
+    "label": "HOC_PHI",
+    "pattern": "tong chi phi"
+  },
+  {
+    "label": "HOC_PHI",
+    "pattern": "tổng chi phí"
+  },
+  {
+    "label": "KY_THI",
+    "pattern": "HB"
+  },
+  {
+    "label": "KY_THI",
+    "pattern": "SPT"
+  },
+  {
+    "label": "KY_THI",
+    "pattern": "THPT"
+  },
+  {
+    "label": "KY_THI",
+    "pattern": "THPT_NK"
+  },
+  {
+    "label": "KY_THI",
+    "pattern": "TSA"
+  },
+  {
+    "label": "KY_THI",
+    "pattern": "VSAT"
   },
   {
     "label": "MA_NGANH",
@@ -839,23 +797,7 @@
   },
   {
     "label": "MA_NGANH",
-    "pattern": "7580201"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7480201"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7480101"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7460108"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7580301"
+    "pattern": "72104_NT"
   },
   {
     "label": "MA_NGANH",
@@ -863,55 +805,19 @@
   },
   {
     "label": "MA_NGANH",
-    "pattern": "7580101_02"
+    "pattern": "7460108"
   },
   {
     "label": "MA_NGANH",
-    "pattern": "7580201_01"
+    "pattern": "7480101"
   },
   {
     "label": "MA_NGANH",
-    "pattern": "7580201_02"
+    "pattern": "7480101_QT"
   },
   {
     "label": "MA_NGANH",
-    "pattern": "7580201_03"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7580201_04"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7580201_05"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7510103"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7580205_01"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7580205_02"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7580213_01"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7520320"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7520309"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7510105"
+    "pattern": "7480201"
   },
   {
     "label": "MA_NGANH",
@@ -920,6 +826,26 @@
   {
     "label": "MA_NGANH",
     "pattern": "7480201_02"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7510103"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7510105"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7510605"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7510605_01"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7510605_02"
   },
   {
     "label": "MA_NGANH",
@@ -947,6 +873,86 @@
   },
   {
     "label": "MA_NGANH",
+    "pattern": "7520309"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7520320"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580101"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580101_02"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580102"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580103"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580104"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580105"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580201"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580201_01"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580201_02"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580201_03"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580201_04"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580201_05"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580201_CLC"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580201_QT"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580205_01"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580205_02"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580213_01"
+  },
+  {
+    "label": "MA_NGANH",
+    "pattern": "7580301"
+  },
+  {
+    "label": "MA_NGANH",
     "pattern": "7580302_01"
   },
   {
@@ -963,30 +969,6 @@
   },
   {
     "label": "MA_NGANH",
-    "pattern": "7510605"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7510605_01"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7510605_02"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7580201_CLC"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7580201_QT"
-  },
-  {
-    "label": "MA_NGANH",
-    "pattern": "7480101_QT"
-  },
-  {
-    "label": "MA_NGANH",
     "pattern": [
       {
         "TEXT": {
@@ -996,12 +978,880 @@
     ]
   },
   {
-    "label": "TO_HOP_MON",
-    "pattern": "A00"
+    "label": "MON_HOC",
+    "pattern": "Bố cục"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Giáo dục Kinh tế và pháp luật"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Hình họa"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Hóa học"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Lịch sử"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Ngữ văn"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Sinh học"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Tin học"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Tiếng Anh"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Tiếng Pháp"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Toán"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Trang trí"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Tư duy Toán học"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Tư duy khoa học"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Tư duy đọc hiểu"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Vật lý"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Vẽ Mỹ Thuật"
+  },
+  {
+    "label": "MON_HOC",
+    "pattern": "Địa lý"
+  },
+  {
+    "label": "NAM_TUYEN_SINH",
+    "pattern": "2020"
+  },
+  {
+    "label": "NAM_TUYEN_SINH",
+    "pattern": "2021"
+  },
+  {
+    "label": "NAM_TUYEN_SINH",
+    "pattern": "2022"
+  },
+  {
+    "label": "NAM_TUYEN_SINH",
+    "pattern": "2023"
+  },
+  {
+    "label": "NAM_TUYEN_SINH",
+    "pattern": "2024"
+  },
+  {
+    "label": "NAM_TUYEN_SINH",
+    "pattern": "2025"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "CCQT"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Chứng chỉ quốc tế"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Học bạ"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Kỳ thi năng lực"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Kỳ thi năng lực/Đánh giá (TSA, ĐGNL, V-SAT)"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "SPT"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "THPT"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "THPT_NK"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "TSA"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "TSA/SPT/V-SAT"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Thi tốt nghiệp THPT"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Thi đánh giá năng lực"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Tuyển thẳng"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Tuyển thẳng/Ưu tiên"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "V-SAT"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Xét học bạ"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Xét học bạ THPT"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "ccqt"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "chung"
+      },
+      {
+        "LOWER": "chi"
+      },
+      {
+        "LOWER": "quoc"
+      },
+      {
+        "LOWER": "te"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "chứng"
+      },
+      {
+        "LOWER": "chỉ"
+      },
+      {
+        "LOWER": "quốc"
+      },
+      {
+        "LOWER": "tế"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "danh"
+      },
+      {
+        "LOWER": "gia"
+      },
+      {
+        "LOWER": "nang"
+      },
+      {
+        "LOWER": "luc"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "hoc"
+      },
+      {
+        "LOWER": "ba"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "học"
+      },
+      {
+        "LOWER": "bạ"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "thi"
+      },
+      {
+        "LOWER": "tot"
+      },
+      {
+        "LOWER": "nghiep"
+      },
+      {
+        "LOWER": "thpt"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "thi"
+      },
+      {
+        "LOWER": "tốt"
+      },
+      {
+        "LOWER": "nghiệp"
+      },
+      {
+        "LOWER": "thpt"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "thpt_nk"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "tuyen"
+      },
+      {
+        "LOWER": "thang"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "tuyển"
+      },
+      {
+        "LOWER": "thẳng"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "uu"
+      },
+      {
+        "LOWER": "tien"
+      },
+      {
+        "LOWER": "xet"
+      },
+      {
+        "LOWER": "tuyen"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "xet"
+      },
+      {
+        "LOWER": "hoc"
+      },
+      {
+        "LOWER": "ba"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "xét"
+      },
+      {
+        "LOWER": "học"
+      },
+      {
+        "LOWER": "bạ"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "đánh"
+      },
+      {
+        "LOWER": "giá"
+      },
+      {
+        "LOWER": "năng"
+      },
+      {
+        "LOWER": "lực"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": [
+      {
+        "LOWER": "ưu"
+      },
+      {
+        "LOWER": "tiên"
+      },
+      {
+        "LOWER": "xét"
+      },
+      {
+        "LOWER": "tuyển"
+      }
+    ]
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "ĐGNL"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Đánh giá năng lực"
+  },
+  {
+    "label": "PHUONG_THUC_TUYEN_SINH",
+    "pattern": "Ưu tiên xét tuyển"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "An toàn thông tin"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Công nghệ kỹ thuật Vật liệu xây dựng"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Công nghệ thông tin"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Công nghệ Đa phương tiện"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Hệ thống kỹ thuật trong công trình"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Khoa học Máy tính"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Khoa học dữ liệu"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kinh tế xây dựng"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kiến trúc"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kiến trúc công nghệ"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kiến trúc công nghệ"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kiến trúc cảnh quan"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kiến trúc nội thất"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kỹ thuật Cấp thoát nước"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kỹ thuật Môi trường"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kỹ thuật cơ khí"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kỹ thuật cơ khí"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kỹ thuật vật liệu"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kỹ thuật xây dựng"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kỹ thuật điều khiển và tự động hoá"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Kỹ thuật điện"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Logistics và Quản lý chuỗi cung ứng"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Mỹ thuật Đô thị"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Quy hoạch vùng và đô thị"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Quản lý dự án"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Thiết kế công nghiệp"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Thiết kế thời trang"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Thiết kế đồ hoạ"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Tin học xây dựng"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "XDDD&CN"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": "Xây dựng Dân dụng và Công nghiệp"
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "cong"
+      },
+      {
+        "LOWER": "nghe"
+      },
+      {
+        "LOWER": "thong"
+      },
+      {
+        "LOWER": "tin"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "công"
+      },
+      {
+        "LOWER": "nghệ"
+      },
+      {
+        "LOWER": "thông"
+      },
+      {
+        "LOWER": "tin"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "khoa"
+      },
+      {
+        "LOWER": "hoc"
+      },
+      {
+        "LOWER": "may"
+      },
+      {
+        "LOWER": "tinh"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "khoa"
+      },
+      {
+        "LOWER": "học"
+      },
+      {
+        "LOWER": "máy"
+      },
+      {
+        "LOWER": "tính"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "kien"
+      },
+      {
+        "LOWER": "truc"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "kiến"
+      },
+      {
+        "LOWER": "trúc"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "ky"
+      },
+      {
+        "LOWER": "thuat"
+      },
+      {
+        "LOWER": "xay"
+      },
+      {
+        "LOWER": "dung"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "kỹ"
+      },
+      {
+        "LOWER": "thuật"
+      },
+      {
+        "LOWER": "xây"
+      },
+      {
+        "LOWER": "dựng"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "quan"
+      },
+      {
+        "LOWER": "ly"
+      },
+      {
+        "LOWER": "du"
+      },
+      {
+        "LOWER": "an"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "quản"
+      },
+      {
+        "LOWER": "lý"
+      },
+      {
+        "LOWER": "dự"
+      },
+      {
+        "LOWER": "án"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "thuat"
+      },
+      {
+        "LOWER": "ke"
+      },
+      {
+        "LOWER": "cong"
+      },
+      {
+        "LOWER": "nghiep"
+      }
+    ]
+  },
+  {
+    "label": "TEN_NGANH",
+    "pattern": [
+      {
+        "LOWER": "thuật"
+      },
+      {
+        "LOWER": "kế"
+      },
+      {
+        "LOWER": "công"
+      },
+      {
+        "LOWER": "nghiệp"
+      }
+    ]
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": [
+      {
+        "LOWER": "deadline"
+      }
+    ]
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": [
+      {
+        "LOWER": "han"
+      },
+      {
+        "LOWER": "nop"
+      }
+    ]
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": [
+      {
+        "LOWER": "hạn"
+      },
+      {
+        "LOWER": "nộp"
+      }
+    ]
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": [
+      {
+        "LOWER": "lich"
+      },
+      {
+        "LOWER": "trinh"
+      }
+    ]
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": [
+      {
+        "LOWER": "lịch"
+      },
+      {
+        "LOWER": "trình"
+      }
+    ]
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": [
+      {
+        "LOWER": "thoi"
+      },
+      {
+        "LOWER": "gian"
+      }
+    ]
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": [
+      {
+        "LOWER": "thoi"
+      },
+      {
+        "LOWER": "han"
+      }
+    ]
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": [
+      {
+        "LOWER": "thời"
+      },
+      {
+        "LOWER": "gian"
+      }
+    ]
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": [
+      {
+        "LOWER": "thời"
+      },
+      {
+        "LOWER": "hạn"
+      }
+    ]
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "deadline"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "han nop"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "hạn nộp"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "lich trinh"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "lịch trình"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "moc thoi gian"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "mốc thời gian"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "ngay bat dau"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "ngay ket thuc"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "ngày bắt đầu"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "ngày kết thúc"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "thoi gian"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "thoi han"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "thời gian"
+  },
+  {
+    "label": "THOI_GIAN",
+    "pattern": "thời hạn"
   },
   {
     "label": "TO_HOP_MON",
-    "pattern": "B00"
+    "pattern": "A00"
   },
   {
     "label": "TO_HOP_MON",
@@ -1009,7 +1859,19 @@
   },
   {
     "label": "TO_HOP_MON",
+    "pattern": "A02"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "B00"
+  },
+  {
+    "label": "TO_HOP_MON",
     "pattern": "C01"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "C02"
   },
   {
     "label": "TO_HOP_MON",
@@ -1018,6 +1880,54 @@
   {
     "label": "TO_HOP_MON",
     "pattern": "D07"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "D24"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "D29"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "H00"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "H01"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "H06"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "H07"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "K00"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "SP1"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "SP2"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "SP3"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "SP4"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "SP5"
   },
   {
     "label": "TO_HOP_MON",
@@ -1033,11 +1943,31 @@
   },
   {
     "label": "TO_HOP_MON",
-    "pattern": "H00"
+    "pattern": "V06"
   },
   {
     "label": "TO_HOP_MON",
-    "pattern": "H07"
+    "pattern": "V10"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "VS1"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "VS2"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "VS3"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "VS4"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "VS5"
   },
   {
     "label": "TO_HOP_MON",
@@ -1049,55 +1979,37 @@
   },
   {
     "label": "TO_HOP_MON",
-    "pattern": "X26"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "A02"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "C02"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "V10"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "H01"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "H06"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "D24"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "D29"
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": "V06"
-  },
-  {
-    "label": "TO_HOP_MON",
     "pattern": "X14"
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": "X26"
   },
   {
     "label": "TO_HOP_MON",
     "pattern": [
       {
-        "LOWER": "toán"
+        "LOWER": "toan"
       },
       {
-        "LOWER": "lý"
+        "LOWER": "anh"
       },
       {
-        "LOWER": "hóa"
+        "LOWER": "ve"
+      }
+    ]
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": [
+      {
+        "LOWER": "toan"
+      },
+      {
+        "LOWER": "ly"
+      },
+      {
+        "LOWER": "anh"
       }
     ]
   },
@@ -1119,41 +2031,13 @@
     "label": "TO_HOP_MON",
     "pattern": [
       {
-        "LOWER": "toán"
-      },
-      {
-        "LOWER": "lý"
-      },
-      {
-        "LOWER": "anh"
-      }
-    ]
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": [
-      {
         "LOWER": "toan"
       },
       {
         "LOWER": "ly"
       },
       {
-        "LOWER": "anh"
-      }
-    ]
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": [
-      {
-        "LOWER": "toán"
-      },
-      {
-        "LOWER": "văn"
-      },
-      {
-        "LOWER": "anh"
+        "LOWER": "ve"
       }
     ]
   },
@@ -1178,6 +2062,48 @@
         "LOWER": "toán"
       },
       {
+        "LOWER": "anh"
+      },
+      {
+        "LOWER": "vẽ"
+      }
+    ]
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": [
+      {
+        "LOWER": "toán"
+      },
+      {
+        "LOWER": "lý"
+      },
+      {
+        "LOWER": "anh"
+      }
+    ]
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": [
+      {
+        "LOWER": "toán"
+      },
+      {
+        "LOWER": "lý"
+      },
+      {
+        "LOWER": "hóa"
+      }
+    ]
+  },
+  {
+    "label": "TO_HOP_MON",
+    "pattern": [
+      {
+        "LOWER": "toán"
+      },
+      {
         "LOWER": "lý"
       },
       {
@@ -1189,61 +2115,13 @@
     "label": "TO_HOP_MON",
     "pattern": [
       {
-        "LOWER": "toan"
-      },
-      {
-        "LOWER": "ly"
-      },
-      {
-        "LOWER": "ve"
-      }
-    ]
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": [
-      {
         "LOWER": "toán"
-      },
-      {
-        "LOWER": "anh"
-      },
-      {
-        "LOWER": "vẽ"
-      }
-    ]
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": [
-      {
-        "LOWER": "toan"
-      },
-      {
-        "LOWER": "anh"
-      },
-      {
-        "LOWER": "ve"
-      }
-    ]
-  },
-  {
-    "label": "TO_HOP_MON",
-    "pattern": [
-      {
-        "LOWER": "vẽ"
-      },
-      {
-        "LOWER": "ngữ"
       },
       {
         "LOWER": "văn"
       },
       {
-        "LOWER": "năng"
-      },
-      {
-        "LOWER": "khiếu"
+        "LOWER": "anh"
       }
     ]
   },
@@ -1268,1379 +2146,23 @@
     ]
   },
   {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "Đăng ký trên Hệ thống Bộ GDĐT"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "ĐK NV trên Hệ thống Bộ GDĐT"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "Đăng ký trên hệ thống V-SAT"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "Đăng ký trên hệ thống UTXT"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "Điền phiếu đăng ký theo mẫu"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "Hoàn thiện hồ sơ theo file thông tin tuyển sinh"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "Nộp hồ sơ trực tiếp hoặc qua bưu điện"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "Đăng ký trực tuyến"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "Nộp hồ sơ trực tuyến"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "Đăng ký qua website"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": "Nộp hồ sơ qua bưu điện"
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
+    "label": "TO_HOP_MON",
     "pattern": [
       {
-        "LOWER": "đăng"
+        "LOWER": "vẽ"
       },
       {
-        "LOWER": "ký"
+        "LOWER": "ngữ"
       },
       {
-        "LOWER": "trên"
+        "LOWER": "văn"
       },
       {
-        "LOWER": "hệ"
+        "LOWER": "năng"
       },
       {
-        "LOWER": "thống"
+        "LOWER": "khiếu"
       }
     ]
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "dang"
-      },
-      {
-        "LOWER": "ky"
-      },
-      {
-        "LOWER": "tren"
-      },
-      {
-        "LOWER": "he"
-      },
-      {
-        "LOWER": "thong"
-      }
-    ]
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "nộp"
-      },
-      {
-        "LOWER": "hồ"
-      },
-      {
-        "LOWER": "sơ"
-      }
-    ]
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "nop"
-      },
-      {
-        "LOWER": "ho"
-      },
-      {
-        "LOWER": "so"
-      }
-    ]
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "điền"
-      },
-      {
-        "LOWER": "phiếu"
-      },
-      {
-        "LOWER": "đăng"
-      },
-      {
-        "LOWER": "ký"
-      }
-    ]
-  },
-  {
-    "label": "BUOC_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "dien"
-      },
-      {
-        "LOWER": "phieu"
-      },
-      {
-        "LOWER": "dang"
-      },
-      {
-        "LOWER": "ky"
-      }
-    ]
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": "Cổng V-SAT HUCE"
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": "Cổng UTXT HUCE"
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": "Hệ thống Bộ GDĐT"
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": "Website tuyển sinh"
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": "Cổng thông tin tuyển sinh"
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": "Hệ thống đăng ký trực tuyến"
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": "Portal tuyển sinh"
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "cổng"
-      },
-      {
-        "LOWER": "v-sat"
-      },
-      {
-        "LOWER": "huce"
-      }
-    ]
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "cong"
-      },
-      {
-        "LOWER": "v-sat"
-      },
-      {
-        "LOWER": "huce"
-      }
-    ]
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "cổng"
-      },
-      {
-        "LOWER": "utxt"
-      },
-      {
-        "LOWER": "huce"
-      }
-    ]
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "cong"
-      },
-      {
-        "LOWER": "utxt"
-      },
-      {
-        "LOWER": "huce"
-      }
-    ]
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "hệ"
-      },
-      {
-        "LOWER": "thống"
-      },
-      {
-        "LOWER": "bộ"
-      },
-      {
-        "LOWER": "gddt"
-      }
-    ]
-  },
-  {
-    "label": "KENH_TUYEN_SINH",
-    "pattern": [
-      {
-        "LOWER": "he"
-      },
-      {
-        "LOWER": "thong"
-      },
-      {
-        "LOWER": "bo"
-      },
-      {
-        "LOWER": "gddt"
-      }
-    ]
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": "IELTS Academic"
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": "IELTS"
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": "SAT"
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": "ACT"
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": "TOEFL"
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": "TOEIC"
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": "Chứng chỉ quốc tế"
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": "Chứng chỉ tiếng Anh"
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": "Chứng chỉ ngoại ngữ"
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": [
-      {
-        "LOWER": "ielts"
-      }
-    ]
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": [
-      {
-        "LOWER": "sat"
-      }
-    ]
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": [
-      {
-        "LOWER": "act"
-      }
-    ]
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": [
-      {
-        "LOWER": "toefl"
-      }
-    ]
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": [
-      {
-        "LOWER": "toeic"
-      }
-    ]
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": [
-      {
-        "LOWER": "chứng"
-      },
-      {
-        "LOWER": "chỉ"
-      },
-      {
-        "LOWER": "quốc"
-      },
-      {
-        "LOWER": "tế"
-      }
-    ]
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": [
-      {
-        "LOWER": "chung"
-      },
-      {
-        "LOWER": "chi"
-      },
-      {
-        "LOWER": "quoc"
-      },
-      {
-        "LOWER": "te"
-      }
-    ]
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": [
-      {
-        "LOWER": "chứng"
-      },
-      {
-        "LOWER": "chỉ"
-      },
-      {
-        "LOWER": "tiếng"
-      },
-      {
-        "LOWER": "anh"
-      }
-    ]
-  },
-  {
-    "label": "CHUNG_CHI",
-    "pattern": [
-      {
-        "LOWER": "chung"
-      },
-      {
-        "LOWER": "chi"
-      },
-      {
-        "LOWER": "tieng"
-      },
-      {
-        "LOWER": "anh"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Phát triển phần mềm"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Quản trị hệ thống"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Công nghệ mạng"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Chuyển đổi số"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Thiết kế đồ họa"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Sản xuất nội dung số"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Truyền thông, quảng cáo"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Lập trình viên"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Kỹ sư phần mềm"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Chuyên viên IT"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Thiết kế web"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Phân tích dữ liệu"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Kỹ sư xây dựng"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Kiến trúc sư"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": "Quản lý dự án"
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "phát"
-      },
-      {
-        "LOWER": "triển"
-      },
-      {
-        "LOWER": "phần"
-      },
-      {
-        "LOWER": "mềm"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "phat"
-      },
-      {
-        "LOWER": "trien"
-      },
-      {
-        "LOWER": "phan"
-      },
-      {
-        "LOWER": "mem"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "quản"
-      },
-      {
-        "LOWER": "trị"
-      },
-      {
-        "LOWER": "hệ"
-      },
-      {
-        "LOWER": "thống"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "quan"
-      },
-      {
-        "LOWER": "tri"
-      },
-      {
-        "LOWER": "he"
-      },
-      {
-        "LOWER": "thong"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "công"
-      },
-      {
-        "LOWER": "nghệ"
-      },
-      {
-        "LOWER": "mạng"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "cong"
-      },
-      {
-        "LOWER": "nghe"
-      },
-      {
-        "LOWER": "mang"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "chuyển"
-      },
-      {
-        "LOWER": "đổi"
-      },
-      {
-        "LOWER": "số"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "chuyen"
-      },
-      {
-        "LOWER": "doi"
-      },
-      {
-        "LOWER": "so"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "thiết"
-      },
-      {
-        "LOWER": "kế"
-      },
-      {
-        "LOWER": "đồ"
-      },
-      {
-        "LOWER": "họa"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "thiet"
-      },
-      {
-        "LOWER": "ke"
-      },
-      {
-        "LOWER": "do"
-      },
-      {
-        "LOWER": "hoa"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "lập"
-      },
-      {
-        "LOWER": "trình"
-      },
-      {
-        "LOWER": "viên"
-      }
-    ]
-  },
-  {
-    "label": "CO_HOI_VIEC_LAM",
-    "pattern": [
-      {
-        "LOWER": "lap"
-      },
-      {
-        "LOWER": "trinh"
-      },
-      {
-        "LOWER": "vien"
-      }
-    ]
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": "điểm chuẩn"
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": "diem chuan"
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": "điểm xét tuyển"
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": "diem xet tuyen"
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": "trúng tuyển"
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": "trung tuyen"
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": "điểm sàn"
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": "diem san"
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": "ngưỡng điểm"
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": "nguong diem"
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": [
-      {
-        "LOWER": "điểm"
-      },
-      {
-        "LOWER": "chuẩn"
-      }
-    ]
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": [
-      {
-        "LOWER": "diem"
-      },
-      {
-        "LOWER": "chuan"
-      }
-    ]
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": [
-      {
-        "LOWER": "điểm"
-      },
-      {
-        "LOWER": "xét"
-      },
-      {
-        "LOWER": "tuyển"
-      }
-    ]
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": [
-      {
-        "LOWER": "diem"
-      },
-      {
-        "LOWER": "xet"
-      },
-      {
-        "LOWER": "tuyen"
-      }
-    ]
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": [
-      {
-        "LOWER": "trúng"
-      },
-      {
-        "LOWER": "tuyển"
-      }
-    ]
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": [
-      {
-        "LOWER": "trung"
-      },
-      {
-        "LOWER": "tuyen"
-      }
-    ]
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": [
-      {
-        "LOWER": "điểm"
-      },
-      {
-        "LOWER": "sàn"
-      }
-    ]
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": [
-      {
-        "LOWER": "diem"
-      },
-      {
-        "LOWER": "san"
-      }
-    ]
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": [
-      {
-        "LOWER": "ngưỡng"
-      },
-      {
-        "LOWER": "điểm"
-      }
-    ]
-  },
-  {
-    "label": "DIEM_CHUAN",
-    "pattern": [
-      {
-        "LOWER": "nguong"
-      },
-      {
-        "LOWER": "diem"
-      }
-    ]
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": "học phí"
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": "hoc phi"
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": "tiền học"
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": "tien hoc"
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": "chi phí học tập"
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": "chi phi hoc tap"
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": "phí đào tạo"
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": "phi dao tao"
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": "tổng chi phí"
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": "tong chi phi"
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": [
-      {
-        "LOWER": "học"
-      },
-      {
-        "LOWER": "phí"
-      }
-    ]
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": [
-      {
-        "LOWER": "hoc"
-      },
-      {
-        "LOWER": "phi"
-      }
-    ]
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": [
-      {
-        "LOWER": "tiền"
-      },
-      {
-        "LOWER": "học"
-      }
-    ]
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": [
-      {
-        "LOWER": "tien"
-      },
-      {
-        "LOWER": "hoc"
-      }
-    ]
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": [
-      {
-        "LOWER": "chi"
-      },
-      {
-        "LOWER": "phí"
-      },
-      {
-        "LOWER": "học"
-      },
-      {
-        "LOWER": "tập"
-      }
-    ]
-  },
-  {
-    "label": "HOC_PHI",
-    "pattern": [
-      {
-        "LOWER": "chi"
-      },
-      {
-        "LOWER": "phi"
-      },
-      {
-        "LOWER": "hoc"
-      },
-      {
-        "LOWER": "tap"
-      }
-    ]
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": "chỉ tiêu"
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": "chi tieu"
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": "số lượng tuyển"
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": "so luong tuyen"
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": "quota"
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": "số chỗ"
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": "so cho"
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": "số sinh viên"
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": "so sinh vien"
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": [
-      {
-        "LOWER": "chỉ"
-      },
-      {
-        "LOWER": "tiêu"
-      }
-    ]
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": [
-      {
-        "LOWER": "chi"
-      },
-      {
-        "LOWER": "tieu"
-      }
-    ]
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": [
-      {
-        "LOWER": "số"
-      },
-      {
-        "LOWER": "lượng"
-      },
-      {
-        "LOWER": "tuyển"
-      }
-    ]
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": [
-      {
-        "LOWER": "so"
-      },
-      {
-        "LOWER": "luong"
-      },
-      {
-        "LOWER": "tuyen"
-      }
-    ]
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": [
-      {
-        "LOWER": "quota"
-      }
-    ]
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": [
-      {
-        "LOWER": "số"
-      },
-      {
-        "LOWER": "chỗ"
-      }
-    ]
-  },
-  {
-    "label": "CHI_TIEU",
-    "pattern": [
-      {
-        "LOWER": "so"
-      },
-      {
-        "LOWER": "cho"
-      }
-    ]
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "thời gian"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "thoi gian"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "lịch trình"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "lich trinh"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "thời hạn"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "thoi han"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "deadline"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "hạn nộp"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "han nop"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "mốc thời gian"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "moc thoi gian"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "ngày bắt đầu"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "ngay bat dau"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "ngày kết thúc"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": "ngay ket thuc"
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": [
-      {
-        "LOWER": "thời"
-      },
-      {
-        "LOWER": "gian"
-      }
-    ]
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": [
-      {
-        "LOWER": "thoi"
-      },
-      {
-        "LOWER": "gian"
-      }
-    ]
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": [
-      {
-        "LOWER": "lịch"
-      },
-      {
-        "LOWER": "trình"
-      }
-    ]
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": [
-      {
-        "LOWER": "lich"
-      },
-      {
-        "LOWER": "trinh"
-      }
-    ]
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": [
-      {
-        "LOWER": "thời"
-      },
-      {
-        "LOWER": "hạn"
-      }
-    ]
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": [
-      {
-        "LOWER": "thoi"
-      },
-      {
-        "LOWER": "han"
-      }
-    ]
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": [
-      {
-        "LOWER": "deadline"
-      }
-    ]
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": [
-      {
-        "LOWER": "hạn"
-      },
-      {
-        "LOWER": "nộp"
-      }
-    ]
-  },
-  {
-    "label": "THOI_GIAN",
-    "pattern": [
-      {
-        "LOWER": "han"
-      },
-      {
-        "LOWER": "nop"
-      }
-    ]
-  },
-  {
-    "label": "CHUONG_TRINH_DAO_TAO",
-    "pattern": "Kỹ sư chính quy, bằng 2, liên thông, song bằng"
-  },
-  {
-    "label": "CHUONG_TRINH_DAO_TAO",
-    "pattern": "Kỹ sư/kiến trúc sư theo CDIO"
-  },
-  {
-    "label": "CHUONG_TRINH_DAO_TAO",
-    "pattern": "Kỹ sư chất lượng cao"
-  },
-  {
-    "label": "CHUONG_TRINH_DAO_TAO",
-    "pattern": "Cử nhân, tích hợp cử nhân kỹ sư/kiến trúc sư"
-  },
-  {
-    "label": "CHUONG_TRINH_DAO_TAO",
-    "pattern": "Đại học vừa học vừa làm"
-  },
-  {
-    "label": "CHUONG_TRINH_DAO_TAO",
-    "pattern": "CDIO"
-  },
-  {
-    "label": "CHUONG_TRINH_DAO_TAO",
-    "pattern": "CLC"
-  },
-  {
-    "label": "CHUONG_TRINH_DAO_TAO",
-    "pattern": "PFIEV"
-  },
-  {
-    "label": "HOC_BONG",
-    "pattern": "Học bổng khuyến khích học tập"
-  },
-  {
-    "label": "HOC_BONG",
-    "pattern": "Học bổng Đỗ Quốc Sam"
-  },
-  {
-    "label": "HOC_BONG",
-    "pattern": "Học bổng CSC"
-  },
-  {
-    "label": "HOC_BONG",
-    "pattern": "Học bổng Merali"
-  },
-  {
-    "label": "HOC_BONG",
-    "pattern": "Học bổng Kumho Asiana"
-  },
-  {
-    "label": "LOAI_HOC_BONG",
-    "pattern": "Nội bộ"
-  },
-  {
-    "label": "LOAI_HOC_BONG",
-    "pattern": "Quốc tế"
-  },
-  {
-    "label": "BAC_HOC",
-    "pattern": "Đại học"
-  },
-  {
-    "label": "BAC_HOC",
-    "pattern": "Thạc sĩ"
-  },
-  {
-    "label": "BAC_HOC",
-    "pattern": "Tiến sĩ"
-  },
-  {
-    "label": "NAM_TUYEN_SINH",
-    "pattern": "2025"
-  },
-  {
-    "label": "NAM_TUYEN_SINH",
-    "pattern": "2024"
-  },
-  {
-    "label": "NAM_TUYEN_SINH",
-    "pattern": "2023"
-  },
-  {
-    "label": "NAM_TUYEN_SINH",
-    "pattern": "2022"
-  },
-  {
-    "label": "NAM_TUYEN_SINH",
-    "pattern": "2021"
-  },
-  {
-    "label": "NAM_TUYEN_SINH",
-    "pattern": "2020"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Xây dựng Dân dụng và Công nghiệp"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Hệ thống kỹ thuật trong công trình"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Tin học xây dựng"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Kỹ thuật Công trình thuỷ"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Kỹ thuật công trình biển"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Kỹ thuật nước - Môi trường nước"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Máy xây dựng"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Kỹ thuật cơ điện"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Kỹ thuật ô tô"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Kinh tế và quản lý đô thị"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Kinh tế và quản lý bất động sản"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Quản lý hạ tầng, đất đai đô thị"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Kiểm toán đầu tư xây dựng"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Logistics đô thị"
-  },
-  {
-    "label": "CHUYEN_NGANH",
-    "pattern": "Logistics công nghiệp"
-  },
-  {
-    "label": "DOI_TUONG_HOC_BONG",
-    "pattern": "Sinh viên hệ chính quy loại Khá trở lên"
-  },
-  {
-    "label": "DOI_TUONG_HOC_BONG",
-    "pattern": "Sinh viên hệ dài hạn chính quy"
-  },
-  {
-    "label": "DOI_TUONG_HOC_BONG",
-    "pattern": "Sinh viên năm 2–4 xuất sắc"
-  },
-  {
-    "label": "DOI_TUONG_HOC_BONG",
-    "pattern": "Nữ sinh khó khăn ngành kỹ thuật-tự nhiên"
-  },
-  {
-    "label": "DOI_TUONG_HOC_BONG",
-    "pattern": "Sinh viên năm nhất xuất sắc hoặc gia đình chính sách"
   }
 ]

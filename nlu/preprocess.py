@@ -6,20 +6,20 @@ Module này xử lý:
 - Tách từ bằng Underthesea
 - Mapping từ đồng nghĩa
 - Loại bỏ stopwords
-"""
+"""  # Docstring mô tả nhiệm vụ module
 
-import re
-from typing import Dict, List, Set
+import re  # Dùng regex để loại bỏ ký tự đặc biệt, nén khoảng trắng
+from typing import Dict, List, Set  # Type hints cho map/tập kết quả
 
-import unicodedata
+import unicodedata  # Hỗ trợ chuẩn hóa Unicode (NFC)
 
 # Import Underthesea cho tokenization tiếng Việt
 try:
-    from underthesea import word_tokenize
+    from underthesea import word_tokenize  # Tokenizer chính
 except ImportError:  # fallback nếu không cài đặt được
 
     def word_tokenize(text: str):
-        return text.split()
+        return text.split()  # Tách đơn giản bằng split khi thiếu thư viện
 
 # Từ dừng tiếng Việt (có thể mở rộng)
 VI_STOPWORDS: Set[str] = {
@@ -70,9 +70,9 @@ def normalize_text(text) -> str:
         - Unicode normalization (NFC)
         - Loại bỏ ký tự đặc biệt (giữ lại chữ cái, số, khoảng trắng)
         - Chuẩn hóa khoảng trắng
-    """
+    """  # Docstring mô tả pipeline chuẩn hóa
     if not isinstance(text, str):
-        text = str(text) if text is not None else ""
+        text = str(text) if text is not None else ""  # Chuyển về chuỗi để tránh crash
 
     # Chuyển về lowercase và strip
     text = text.lower().strip()

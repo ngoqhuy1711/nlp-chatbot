@@ -1,6 +1,6 @@
 """Processors module - Các hàm xử lý dữ liệu CSV."""
 
-from .academic import list_tuition, list_scholarships
+from .academic import list_tuition, list_scholarships  # Học phí và học bổng
 from .admissions import (
     list_admission_conditions,
     list_admission_quota,
@@ -12,11 +12,11 @@ from .admissions import (
     get_combination_by_code,
     search_combinations,
 )
-from .cache import read_csv, clear_cache
-from .cefr import get_cefr_conversion, convert_certificate_score
-from .contact import get_contact_info
-from .majors import list_majors
-from .scores import find_standard_score, suggest_majors_by_score
+from .cache import read_csv, clear_cache  # Helper đọc CSV có cache
+from .cefr import get_cefr_conversion, convert_certificate_score  # Quy đổi chứng chỉ
+from .contact import get_contact_info  # Thông tin liên hệ
+from .majors import list_majors  # Danh sách ngành
+from .scores import find_standard_score, suggest_majors_by_score  # Điểm chuẩn / gợi ý ngành
 from .utils import (
     strip_diacritics,
     normalize_text,
@@ -28,8 +28,8 @@ from .utils import (
 )
 
 __all__ = [
-    "read_csv", "clear_cache",
-    "strip_diacritics", "normalize_text", "canonicalize_vi_ascii",
+    "read_csv", "clear_cache",  # Hàm cache CSV
+    "strip_diacritics", "normalize_text", "canonicalize_vi_ascii",  # Tiện ích xử lý chuỗi
     "clean_program_name", "infer_major_from_message", "format_data_to_text", "add_contact_suggestion",
     "list_majors",
     "find_standard_score", "suggest_majors_by_score",

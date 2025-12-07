@@ -1,69 +1,69 @@
-"""NLP Pipeline - Intent detection và Entity extraction."""
+"""NLP Pipeline - Intent detection và Entity extraction."""  # Docstring mô tả pipeline
 
-import csv
-import os
-from typing import List, Dict, Tuple, Any, Optional
+import csv  # Đọc dữ liệu intent từ CSV
+import os  # Ghép đường dẫn
+from typing import List, Dict, Tuple, Any, Optional  # Type hints
 
 try:
-    from underthesea import word_tokenize
+    from underthesea import word_tokenize  # Tokenizer tiếng Việt
 except ImportError:
     def word_tokenize(text: str):
-        return text.split()
+        return text.split()  # Fallback đơn giản nếu thiếu thư viện
 
 try:
-    from underthesea import ner as uts_ner
+    from underthesea import ner as uts_ner  # NER dùng cho entity fallback
 except ImportError:
-    uts_ner = None
+    uts_ner = None  # Nếu không cài đặt thì disable NER
 
 try:
     from .preprocess import normalize_text as ext_normalize_text
     from .preprocess import tokenize_and_map as ext_tokenize_and_map
 except ImportError:
-    ext_normalize_text = None
+    ext_normalize_text = None  # Giữ None, pipeline sẽ fallback logic đơn giản
     ext_tokenize_and_map = None
 
 try:
-    from .intent import IntentDetector
+    from .intent import IntentDetector  # Bộ nhận diện intent
 except ImportError:
     IntentDetector = None
 
 try:
-    from .entities import EntityExtractor
+    from .entities import EntityExtractor  # Bộ trích xuất entity
 except ImportError:
     EntityExtractor = None
 
-from config import DATA_DIR, get_intent_threshold
+from config import DATA_DIR, get_intent_threshold  # Đọc config từ hệ thống
 
-DEFAULT_INTENT_THRESHOLD = get_intent_threshold()
+DEFAULT_INTENT_THRESHOLD = get_intent_threshold()  # Ngưỡng intent mặc định lấy từ config
 
 
 def _normalize_text(text) -> str:
-    """Chuẩn hóa văn bản."""
-    if ext_normalize_text is not None:
-        return ext_normalize_text(text)
+    """Chuẩn hóa văn bản."""  # Docstring
+    if ext_normalize_text is not None:  # Nếu module preprocess khả dụng
+        return ext_normalize_text(text)  # Dùng logic chuẩn
     if not isinstance(text, str):
-        text = str(text) if text is not None else ""
-    return text.lower().strip()
+        text = str(text) if text is not None else ""  # Fallback convert chuỗi
+    return text.lower().strip()  # Chuẩn hóa cơ bản
 
 
 def _load_synonyms(path: str) -> Dict[str, str]:
-    """Load từ điển từ đồng nghĩa từ file CSV."""
+    """Load từ điển từ đồng nghĩa từ file CSV."""  # Docstring mô tả
     mapping: Dict[str, str] = {}
     if not os.path.isfile(path):
-        return mapping
+        return mapping  # File không tồn tại → trả dict rỗng
 
     with open(path, newline="", encoding="utf-8") as f:
         reader = csv.reader(f)
-        next(reader, None)
+        next(reader, None)  # Bỏ header
         for row in reader:
             if not row or (row[0] and row[0].strip().startswith('#')) or len(row) < 3:
-                continue
+                continue  # Bỏ comment hoặc dòng thiếu cột
             entity, canonical, alias = row[0].strip(), row[1].strip(), row[2].strip()
             if entity == "entity" or not alias or not canonical:
-                continue
+                continue  # Bỏ dòng header cũ hoặc thiếu dữ liệu
             alias_norm, canonical_norm = _normalize_text(alias), _normalize_text(canonical)
             if alias_norm and canonical_norm:
-                mapping[alias_norm] = canonical_norm
+                mapping[alias_norm] = canonical_norm  # Lưu mapping alias → canonical
     return mapping
 
 
@@ -132,35 +132,35 @@ class NLPPipeline:
         """Load mẫu câu cho intent detection."""
         intent_to_samples: Dict[str, List[List[str]]] = {}
         if not os.path.isfile(path):
-            return intent_to_samples
+            return intent_to_samples  # File không tồn tại → trả dict rỗng
 
         with open(path, newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for r in reader:
-                utt = _normalize_text(r.get("utterance") or "")
+                utt = _normalize_text(r.get("utterance") or "")  # Chuẩn hóa utterance
                 intent = (r.get("intent") or "").strip()
                 if not utt or not intent:
-                    continue
-                toks = ext_tokenize_and_map(utt, self.syn_map) if ext_tokenize_and_map else utt.split()
-                intent_to_samples.setdefault(intent, []).append(toks)
+                    continue  # Bỏ dòng thiếu dữ liệu
+                toks = ext_tokenize_and_map(utt, self.syn_map) if ext_tokenize_and_map else utt.split()  # Tokenize
+                intent_to_samples.setdefault(intent, []).append(toks)  # Gom vào intent tương ứng
         return intent_to_samples
 
     def detect_intent(self, text: str) -> Tuple[str, float]:
         """Nhận diện intent của câu hỏi."""
         if self._intent_detector is None:
-            return "fallback", 0.0
-        return self._intent_detector.detect(text, self.syn_map, _normalize_text)
+            return "fallback", 0.0  # Nếu IntentDetector chưa khởi tạo
+        return self._intent_detector.detect(text, self.syn_map, _normalize_text)  # Trả intent + score
 
     def extract_entities(self, text: str) -> List[Dict[str, Any]]:
         """Trích xuất các entity trong câu hỏi."""
         if self._entity_extractor is None:
-            return []
-        return self._entity_extractor.extract(text)
+            return []  # Không có extractor → trả danh sách rỗng
+        return self._entity_extractor.extract(text)  # Kết quả entity
 
     def analyze(self, text: str) -> Dict[str, Any]:
         """Phân tích toàn diện câu hỏi từ người dùng."""
-        intent, score = self.detect_intent(text)
-        entities = self.extract_entities(text)
+        intent, score = self.detect_intent(text)  # Intent + score
+        entities = self.extract_entities(text)  # Danh sách entity
 
         # Heuristic: Override intent cho câu hỏi rõ ràng về ngành học
         norm_text = _normalize_text(text)
@@ -181,7 +181,7 @@ class NLPPipeline:
             has_intro_keyword = any(kw in norm_text for kw in major_intro_keywords)
 
             if (has_major or (has_nganh_keyword and has_intro_keyword)) and not has_exclusion:
-                intent = "hoi_nganh_hoc"
-                score = self.intent_threshold + 0.15
+                intent = "hoi_nganh_hoc"  # Gán intent ngành học
+                score = self.intent_threshold + 0.15  # Boost score để vượt ngưỡng
 
         return {"intent": intent, "score": score, "entities": entities}

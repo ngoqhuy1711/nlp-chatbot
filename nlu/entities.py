@@ -1,115 +1,115 @@
+""" 
+Entity Extraction Module - Trích xuất thực thể từ câu hỏi 
+ 
+Module này trích xuất các entity từ câu hỏi người dùng: 
+- Pattern matching từ entity.json 
+- Dictionary lookup từ các file CSV 
+- NER (Named Entity Recognition) từ Underthesea 
+- Deduplication và normalization 
 """
-Entity Extraction Module - Trích xuất thực thể từ câu hỏi
 
-Module này trích xuất các entity từ câu hỏi người dùng:
-- Pattern matching từ entity.json
-- Dictionary lookup từ các file CSV
-- NER (Named Entity Recognition) từ Underthesea
-- Deduplication và normalization
-"""
+import csv  # Đọc dữ liệu entity từ CSV
+import json  # Đọc entity patterns từ JSON
+import os  # Ghép đường dẫn file
+from typing import Any, Dict, List, Set, Tuple, Optional  # Kiểu dữ liệu tổng hợp
 
-import csv
-import json
-import os
-from typing import Any, Dict, List, Set, Tuple, Optional
+from .preprocess import normalize_text  # Hàm normalize chung cho pipeline
 
-from .preprocess import normalize_text
-
-# Import NER từ Underthesea
+# Import NER từ Underthesea 
 try:
-    from underthesea import ner as uts_ner  # type: ignore
+    from underthesea import ner as uts_ner  # type: ignore  # Hàm NER chính 
 except ImportError:
-    uts_ner = None  # type: ignore
+    uts_ner = None  # type: ignore  # Nếu không cài được Underthesea thì vô hiệu hóa NER 
 
 
 def _load_entity_patterns(path: str) -> List[Tuple[str, str]]:
+    """ 
+    Load patterns từ file entity.json 
+ 
+    Args: 
+        path: Đường dẫn file entity.json 
+ 
+    Returns: 
+        List các tuple (label, pattern) 
     """
-    Load patterns từ file entity.json
+    patterns: List[Tuple[str, str]] = []  # Danh sách kết quả 
+    if not os.path.isfile(path):  # Nếu file không tồn tại 
+        return patterns  # Trả về list rỗng 
 
-    Args:
-        path: Đường dẫn file entity.json
-
-    Returns:
-        List các tuple (label, pattern)
-    """
-    patterns: List[Tuple[str, str]] = []
-    if not os.path.isfile(path):
-        return patterns
-
-    with open(path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        for item in data:
-            label = (item.get("label") or "").strip()
-            # Chỉ lấy pattern dạng string (bỏ qua pattern phức tạp)
-            pat = item.get("pattern")
-            if isinstance(pat, str):
-                pat = normalize_text(pat)
+    with open(path, "r", encoding="utf-8") as f:  # Mở file JSON 
+        data = json.load(f)  # Đọc nội dung 
+        for item in data:  # Duyệt từng entry 
+            label = (item.get("label") or "").strip()  # Lấy nhãn entity 
+            # Chỉ lấy pattern dạng string (bỏ qua pattern phức tạp) 
+            pat = item.get("pattern")  # Lấy pattern 
+            if isinstance(pat, str):  # Nếu là chuỗi 
+                pat = normalize_text(pat)  # Chuẩn hóa pattern 
             else:
-                continue
-            if label and pat:
-                patterns.append((label, pat))
-    return patterns
+                continue  # Bỏ qua nếu không phải chuỗi 
+            if label and pat:  # Đảm bảo có đủ dữ liệu 
+                patterns.append((label, pat))  # Lưu tuple (label, pattern) 
+    return patterns  # Trả danh sách patterns 
 
 
 def _extract_by_ner(text: str) -> List[Dict[str, Any]]:
-    """
-    Trích xuất entity bằng NER từ Underthesea
+    """ 
+    Trích xuất entity bằng NER từ Underthesea 
 
-    Args:
-        text: Văn bản cần xử lý
+    Args: 
+        text: Văn bản cần xử lý 
 
-    Returns:
-        List các entity được trích xuất
+    Returns: 
+        List các entity được trích xuất 
     """
-    if uts_ner is None:
-        return []
+    if uts_ner is None:  # Nếu NER không khả dụng 
+        return []  # Trả về rỗng 
 
     try:
-        ner_result = uts_ner(text)  # List of (word, tag)
+        ner_result = uts_ner(text)  # List of (word, tag) 
     except (ValueError, RuntimeError):
-        return []
+        return []  # NER lỗi → bỏ qua 
 
-    found: List[Dict[str, Any]] = []
-    buffer_tokens: List[str] = []
-    current_tag: str = ""
+    found: List[Dict[str, Any]] = []  # Danh sách entity tìm được 
+    buffer_tokens: List[str] = []  # Tạm lưu tokens của entity hiện tại 
+    current_tag: str = ""  # Nhãn entity hiện tại 
 
     def flush():
         """Ghi nhận entity đã hoàn thành"""
         nonlocal buffer_tokens, current_tag, found
-        if buffer_tokens and current_tag:
-            span = " ".join(buffer_tokens)
-            found.append({"label": current_tag, "text": span, "source": "ner"})
-        buffer_tokens = []
-        current_tag = ""
+        if buffer_tokens and current_tag:  # Khi có dữ liệu trong buffer 
+            span = " ".join(buffer_tokens)  # Nối thành cụm từ 
+            found.append({"label": current_tag, "text": span, "source": "ner"})  # Lưu entity 
+        buffer_tokens = []  # Reset buffer 
+        current_tag = ""  # Reset nhãn 
 
-    # Xử lý kết quả NER theo format BIO
-    # Underthesea NER trả về list of tuples: [(word, pos_tag, ner_tag, chunk), ...]
-    # hoặc [(word, ner_tag), ...] tùy version
-    for item in ner_result:
-        # Unpack an toàn: lấy phần tử đầu (word) và cuối (NER tag)
+    # Xử lý kết quả NER theo format BIO 
+    # Underthesea NER trả về list of tuples: [(word, pos_tag, ner_tag, chunk), ...] 
+    # hoặc [(word, ner_tag), ...] tùy version 
+    for item in ner_result:  # Duyệt từng phần tử 
+        # Unpack an toàn: lấy phần tử đầu (word) và cuối (NER tag) 
         if isinstance(item, (list, tuple)):
             if len(item) >= 2:
-                token = item[0]  # Word là phần tử đầu
-                tag = item[-1]  # NER tag thường là phần tử cuối
+                token = item[0]  # Word là phần tử đầu 
+                tag = item[-1]  # NER tag thường là phần tử cuối 
             else:
-                continue  # Skip nếu format không đúng
+                continue  # Skip nếu format không đúng 
         else:
-            continue  # Skip nếu không phải tuple/list
+            continue  # Skip nếu không phải tuple/list 
 
-        # Xử lý theo BIO format
-        if isinstance(tag, str) and tag.startswith("B-"):  # Begin
-            flush()
-            current_tag = tag[2:]
-            buffer_tokens = [token]
+        # Xử lý theo BIO format 
+        if isinstance(tag, str) and tag.startswith("B-"):  # Begin 
+            flush()  # Kết thúc entity trước đó 
+            current_tag = tag[2:]  # Lưu nhãn (bỏ tiền tố B-) 
+            buffer_tokens = [token]  # Bắt đầu entity mới 
         elif (
                 isinstance(tag, str) and tag.startswith("I-") and current_tag == tag[2:]
-        ):  # Inside
-            buffer_tokens.append(token)
-        else:  # Other
-            flush()
+        ):  # Inside 
+            buffer_tokens.append(token)  # Thêm token vào entity hiện tại 
+        else:  # Other 
+            flush()  # Kết thúc entity nếu đang theo dõi 
 
-    flush()  # Flush entity cuối cùng
-    return found
+    flush()  # Flush entity cuối cùng 
+    return found  # Trả danh sách entity tìm được 
 
 
 class EntityExtractor:
@@ -131,16 +131,16 @@ class EntityExtractor:
             patterns_path: Đường dẫn file entity.json
             synonym_map: Dict mapping từ đồng nghĩa -> từ chuẩn (optional)
         """
-        self.data_dir = data_dir
-        self.synonym_map = synonym_map or {}
+        self.data_dir = data_dir  # Lưu thư mục chứa dữ liệu CSV
+        self.synonym_map = synonym_map or {}  # Map đồng nghĩa để chuẩn hóa entity text
 
         # Load patterns từ entity.json
         self.entity_patterns: List[Tuple[str, str]] = _load_entity_patterns(
-            patterns_path
+            patterns_path  # Đọc danh sách pattern thủ công
         )
 
         # Load dictionary phrases từ các file CSV
-        self.dict_phrases: List[Tuple[str, str]] = self._load_dictionary_phrases()
+        self.dict_phrases: List[Tuple[str, str]] = self._load_dictionary_phrases()  # Sinh phrase từ CSV
 
         # Mapping alias cho entity labels (chuẩn hóa tên)
         self.entity_label_alias: Dict[str, str] = {
@@ -161,17 +161,17 @@ class EntityExtractor:
         Returns:
             List các tuple (label, phrase) đã được normalize
         """
-        phrases: List[Tuple[str, str]] = []
+        phrases: List[Tuple[str, str]] = []  # Danh sách kết quả
 
-        def add_file(path: str, handler):
-            """Helper function để đọc file CSV và xử lý"""
-            if os.path.isfile(path):
-                with open(path, newline="", encoding="utf-8") as f:
-                    reader = csv.DictReader(f)
-                    for r in reader:
-                        handler(r, phrases)
+        def add_file(path: str, handler):  # type: ignore
+            """Helper function để đọc file CSV và xử lý"""  # Docstring
+            if os.path.isfile(path):  # Kiểm tra file tồn tại
+                with open(path, newline="", encoding="utf-8") as f:  # Mở file CSV
+                    reader = csv.DictReader(f)  # Tạo reader
+                    for r in reader:  # Duyệt từng dòng
+                        handler(r, phrases)  # Áp dụng hàm xử lý
 
-        base = self.data_dir
+        base = self.data_dir  # Base path để ghép file
 
         # majors.csv - Thông tin ngành học
         add_file(
@@ -206,9 +206,6 @@ class EntityExtractor:
                 ),
             ),
         )
-
-        # REMOVED: method_condition.csv - File đã bị xóa trong refactoring
-        # Thông tin điều kiện đã được merge vào admission_conditions.csv
 
         # tuition.csv - Học phí
         add_file(
@@ -268,8 +265,6 @@ class EntityExtractor:
             ),
         )
 
-        # REMOVED: floor_score.csv - File trống, đã bị xóa trong refactoring
-
         # admission_targets.csv - Chỉ tiêu tuyển sinh
         add_file(
             os.path.join(base, "admission_targets.csv"),
@@ -324,8 +319,6 @@ class EntityExtractor:
                 ),
             ),
         )
-
-        # REMOVED: apply_channel.csv - File đã bị xóa trong refactoring
 
         # contact_info.csv - Thông tin liên hệ
         add_file(
@@ -400,15 +393,20 @@ class EntityExtractor:
                     if r.get("subject_names")
                     else None
                 ),
-                (
-                    p.append(("KY_THI", normalize_text(r.get("exam_type") or "")))
-                    if r.get("exam_type")
-                    else None
-                ),
+                # Các môn học riêng lẻ trong tổ hợp
+                [
+                    p.append(("MON_HOC", normalize_text(subject.strip())))
+                    for subject in (r.get("subject_names") or "").split(",")
+                    if subject.strip()
+                ],
+                # Loại kỳ thi (THPT, TSA, SPT, VSAT, etc.)
+                [
+                    p.append(("KY_THI", normalize_text(exam_type.strip())))
+                    for exam_type in (r.get("exam_type") or "").split(",")
+                    if exam_type.strip()
+                ],
             ),
         )
-
-        # REMOVED: admissions_sector.csv - File không tồn tại
 
         # admission_conditions.csv - Điều kiện tuyển sinh
         add_file(
@@ -441,8 +439,6 @@ class EntityExtractor:
                 ),
             ),
         )
-
-        # REMOVED: admission_method_for_each_major.csv - File không tồn tại
 
         # Loại bỏ phrases rỗng và trùng lặp
         cleaned: List[Tuple[str, str]] = []

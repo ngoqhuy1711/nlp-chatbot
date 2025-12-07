@@ -5,6 +5,7 @@
 ## 🎯 Tính Năng
 
 ### Tra Cứu Thông Tin
+
 - ✅ Điểm chuẩn các ngành theo năm
 - ✅ Học phí và học bổng
 - ✅ Thông tin ngành học, tổ hợp môn
@@ -12,12 +13,14 @@
 - ✅ Thông tin liên hệ
 
 ### NLP Tiếng Việt
+
 - ✅ Intent detection (TF-IDF + Cosine)
 - ✅ Entity extraction (pattern + dictionary)
 - ✅ Context management (nhớ 10 câu hỏi gần nhất)
 - ✅ Fallback thông minh khi không hiểu
 
 ### Bảo Mật
+
 - ✅ Input sanitization (XSS/SQLi)
 - ✅ Rate limiting
 - ✅ Request validation
@@ -255,7 +258,6 @@ git commit -m "feat: add new feature"
 # 5. Push và tạo PR
 git push origin feature/your-feature
 ```
-
 
 ### Tài Nguyên
 

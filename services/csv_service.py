@@ -1,97 +1,48 @@
 """
 CSV Service
-
-services/
-├── csv_service.py          # ← File này (backward compatible)
-├── processors/             # Data processing modules
-│   ├── cache.py           # CSV caching
-│   ├── utils.py           # Text utils & formatting
-│   ├── majors.py          # Majors functions
-│   ├── scores.py          # Scores functions
-│   ├── admissions.py      # Admissions functions
-│   ├── academic.py        # Tuition & scholarships
-│   ├── contact.py         # Contact info
-│   └── cefr.py            # CEFR conversion
-└── handlers/               # Intent handling logic
-    ├── intent_handler.py  # Intent queries
-    └── fallback.py        # Fallback queries
-
-==== CẤU TRÚC DỮ LIỆU CSV ====
-1. **majors.csv**: Thông tin ngành học
-   - major_code, major_name, description, additional_info
-
-2. **admission_scores.csv**: Điểm chuẩn (nhiều cột năm)
-   - program_name, 2020, 2021, 2022, 2023, 2024, 2025, subject_combination
-
-3. **admission_targets.csv**: Chỉ tiêu tuyển sinh
-   - major_code, major_name, program_name, admission_method, subject_combination, quota
-
-4. **admission_methods.csv**: Phương thức xét tuyển
-   - method_code, abbreviation, method_name, description, requirements
-
-5. **admissions_schedule.csv**: Lịch trình xét tuyển
-   - event_name, timeline, admission_method, note
-
-6. **admission_conditions.csv**: Điều kiện xét tuyển
-   - nam, admission_method, requirements
-
-7. **subject_combinations.csv**: Tổ hợp môn thi
-   - combination_code, subject_names, exam_type, note
-
-8. **tuition.csv**: Học phí
-   - academic_year, program_type, tuition_fee, unit, note
-
-9. **scholarships.csv**: Học bổng
-   - scholarship_name, value, quantity, academic_year, requirements, note
-
-10. **contact_info.csv**: Thông tin liên hệ
-    - university_name, address, email, phone, hotline, website, fanpage, note
-
-11. **cefr_conversion.csv**: Quy đổi điểm chứng chỉ tiếng Anh
-    - IELTS, TOEFL iBT, Điểm quy đổi
 """
 
 # ============================================================================
 # IMPORTS - Re-export từ các module con
 # ============================================================================
 
-from .handlers.fallback import handle_fallback_query
+from .handlers.fallback import handle_fallback_query  # Handler fallback
 # Handlers
-from .handlers.intent_handler import handle_intent_query
+from .handlers.intent_handler import handle_intent_query  # Handler intent chính
 # Academic functions
 from .processors.academic import (
-    list_tuition,
-    list_scholarships,
+    list_tuition,  # Trả bảng học phí
+    list_scholarships,  # Trả danh sách học bổng
 )
 # Admissions functions
 from .processors.admissions import (
-    list_admission_conditions,
-    list_admission_quota,
-    list_admission_methods_general,
-    list_admission_methods,
-    list_admissions_schedule,
-    get_admission_targets,
-    get_combination_codes,
+    list_admission_conditions,  # Điều kiện xét tuyển
+    list_admission_quota,  # Chỉ tiêu
+    list_admission_methods_general,  # Tổng quan phương thức
+    list_admission_methods,  # Phương thức chi tiết
+    list_admissions_schedule,  # Lịch tuyển sinh
+    get_admission_targets,  # Thông tin chỉ tiêu theo ngành
+    get_combination_codes,  # Lấy danh sách mã tổ hợp
 )
 # Cache functions
-from .processors.cache import read_csv as _read_csv, clear_cache
+from .processors.cache import read_csv as _read_csv, clear_cache  # Cache đọc CSV
 # CEFR functions
 from .processors.cefr import (
-    get_cefr_conversion,
-    convert_certificate_score,
+    get_cefr_conversion,  # Đọc bảng quy đổi
+    convert_certificate_score,  # Hàm quy đổi từng chứng chỉ
 )
 # Contact functions
-from .processors.contact import get_contact_info
+from .processors.contact import get_contact_info  # Trả thông tin liên hệ
 # Majors functions
-from .processors.majors import list_majors
+from .processors.majors import list_majors  # Danh sách ngành
 # Scores functions
 from .processors.scores import (
-    find_standard_score,
-    suggest_majors_by_score,
+    find_standard_score,  # Tìm điểm chuẩn
+    suggest_majors_by_score,  # Gợi ý ngành theo điểm
 )
 # Utility functions
 from .processors.utils import (
-    format_data_to_text,
+    format_data_to_text,  # Định dạng dữ liệu ra text
 )
 
 
@@ -101,44 +52,44 @@ from .processors.utils import (
 # Những functions này được dùng internally, cần giữ để tương thích
 
 def _read_csv_cached(path: str):
-    """Backward compatibility wrapper"""
-    return _read_csv(path)
+    """Backward compatibility wrapper"""  # Docstring ghi chú
+    return _read_csv(path)  # Gọi hàm mới từ cache
 
 
 def _strip_diacritics(text: str) -> str:
-    """Backward compatibility - already imported above"""
-    from .processors.utils import strip_diacritics
-    return strip_diacritics(text)
+    """Backward compatibility - already imported above"""  # Docstring
+    from .processors.utils import strip_diacritics  # Import cục bộ tránh vòng lặp
+    return strip_diacritics(text)  # Trả về chuỗi đã bỏ dấu
 
 
 def _normalize_text(text: str) -> str:
-    """Backward compatibility - already imported above"""
-    from .processors.utils import normalize_text
-    return normalize_text(text)
+    """Backward compatibility - already imported above"""  # Docstring
+    from .processors.utils import normalize_text  # Import cục bộ
+    return normalize_text(text)  # Gọi hàm normalize
 
 
 def _canonicalize_vi_ascii(text: str) -> str:
-    """Backward compatibility - already imported above"""
-    from .processors.utils import canonicalize_vi_ascii
-    return canonicalize_vi_ascii(text)
+    """Backward compatibility - already imported above"""  # Docstring
+    from .processors.utils import canonicalize_vi_ascii  # Import cục bộ
+    return canonicalize_vi_ascii(text)  # Gọi hàm canonicalize
 
 
 def _clean_program_name(name: str) -> str:
-    """Backward compatibility - already imported above"""
-    from .processors.utils import clean_program_name
-    return clean_program_name(name)
+    """Backward compatibility - already imported above"""  # Docstring
+    from .processors.utils import clean_program_name  # Import cục bộ
+    return clean_program_name(name)  # Chuẩn hóa tên chương trình
 
 
 def _infer_major_from_message(message: str):
-    """Backward compatibility - already imported above"""
-    from .processors.utils import infer_major_from_message
-    return infer_major_from_message(message)
+    """Backward compatibility - already imported above"""  # Docstring
+    from .processors.utils import infer_major_from_message  # Import cục bộ
+    return infer_major_from_message(message)  # Suy đoán ngành từ text
 
 
 def _add_contact_suggestion(message: str) -> str:
-    """Backward compatibility - already imported above"""
-    from .processors.utils import add_contact_suggestion
-    return add_contact_suggestion(message)
+    """Backward compatibility - already imported above"""  # Docstring
+    from .processors.utils import add_contact_suggestion  # Import cục bộ
+    return add_contact_suggestion(message)  # Thêm gợi ý liên hệ
 
 
 # ============================================================================
